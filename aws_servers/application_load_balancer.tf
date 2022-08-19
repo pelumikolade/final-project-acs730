@@ -1,4 +1,4 @@
-# Create Application Load Balancer 
+# Creates an Application Load Balancer 
 resource "aws_lb" "alb" {
   name               = "${var.prefix}-${var.env}-alb"
   internal           = false
