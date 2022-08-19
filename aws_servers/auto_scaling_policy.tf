@@ -1,4 +1,4 @@
-#Create Auto Scaling Policy
+#Create Auto Scaling Out-Policy
 resource "aws_autoscaling_policy" "cpu_policy_up" {
   name                   = "cpu_policy_up"
   scaling_adjustment     = 1
@@ -7,7 +7,7 @@ resource "aws_autoscaling_policy" "cpu_policy_up" {
   autoscaling_group_name = aws_autoscaling_group.final.name
 }
 
-
+#Create Auto Scaling In-Policy
 resource "aws_autoscaling_policy" "cpu_policy_down" {
   name                   = "cpu_policy_down"
   scaling_adjustment     = -1
